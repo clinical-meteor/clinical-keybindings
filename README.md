@@ -1,4 +1,4 @@
-clinical:keybindings
+clinical:study-keybindings
 ======================================
 
 Keybindings dialogs for the ClinicalFramework apps.
