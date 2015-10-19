@@ -44,14 +44,14 @@ Meteor.startup(function () {
     Session.toggle('pageNavbars');
   });
   Mousetrap.bind('ctrl+command+y', function () {
-    Session.toggle('showOutboxCard', true);
-    Session.toggle('outboxCardOpen', true);
+    Session.toggle('showOutboxCard');
+    Session.toggle('outboxCardOpen');
   });
   Mousetrap.bind('ctrl+command+b', function () {
-    Session.toggle('hasPageBorder', true);
+    Session.toggle('hasPageBorder');
   });
   Mousetrap.bind('ctrl+command+p', function () {
-    Session.toggle('hasPagePadding', true);
+    Session.toggle('hasPagePadding');
   });
   Mousetrap.bind('ctrl+command+o', function () {
     Session.toggle('pageBackgroundIsWhite');
