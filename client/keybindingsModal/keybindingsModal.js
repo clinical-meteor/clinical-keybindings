@@ -1,7 +1,8 @@
 Meteor.startup(function () {
   Session.setDefault('show_keybindings', false);
   Session.setDefault('mainPanelIsCard', true);
-  Session.setDefault('showSearchbar', true);
+
+  Session.setDefault('showSearchbar', false);
   Session.setDefault('showNavbars', true);
   Session.setDefault('showSidebar', false);
   // Session.setDefault('hasPageBorder', false);
@@ -55,6 +56,17 @@ Meteor.startup(function () {
   });
   Mousetrap.bind('ctrl+command+o', function () {
     Session.toggle('pageBackgroundIsWhite');
+  });
+
+
+  Mousetrap.bind('ctrl+command+g', function () {
+    Session.toggle('navIsFullscreen');
+  });
+  Mousetrap.bind('ctrl+command+h', function () {
+    Session.toggle('pageLeftToWestRule');
+  });
+  Mousetrap.bind('ctrl+command+j', function () {
+    Session.toggle('pageIsWide');
   });
 });
 
