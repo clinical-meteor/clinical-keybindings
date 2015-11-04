@@ -15,9 +15,11 @@ Package.onUse(function (api) {
   api.use('clinical:modals@1.0.5');
   api.use('mousetrap:mousetrap@1.4.6');
 
-  api.addFiles('client/keybindingsModal/keybindingsModal.html', 'client');
-  api.addFiles('client/keybindingsModal/keybindingsModal.js', 'client');
-  api.addFiles('client/keybindingsModal/keybindingsModal.less', 'client');
+  api.addFiles('client/components/keybindingsModal/keybindingsModal.html', 'client');
+  api.addFiles('client/components/keybindingsModal/keybindingsModal.js', 'client');
+  api.addFiles('client/components/keybindingsModal/keybindingsModal.less', 'client');
+
+  api.addFiles('client/keybindings.js', 'client');
 
   api.export('keybindingsModal');
 });

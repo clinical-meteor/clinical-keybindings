@@ -5,9 +5,6 @@ Meteor.startup(function () {
   Session.setDefault('showSearchbar', false);
   Session.setDefault('showNavbars', true);
   Session.setDefault('showSidebar', false);
-  // Session.setDefault('hasPageBorder', false);
-  // Session.setDefault('hasPagePadding', true);
-  // Session.setDefault('pageBackgroundIsWhite', false);
 
   Mousetrap.bind('ctrl+command+k', function () {
     Session.toggle('show_keybindings');
@@ -41,14 +38,12 @@ Meteor.startup(function () {
   Mousetrap.bind('ctrl+command+w', function () {
     Session.toggle('wideCard');
   });
-  Mousetrap.bind('ctrl+command+p', function () {
-    Session.toggle('pageNavbars');
-  });
+
   Mousetrap.bind('ctrl+command+y', function () {
     Session.toggle('showOutboxCard');
     Session.toggle('outboxCardOpen');
   });
-  Mousetrap.bind('ctrl+command+b', function () {
+  Mousetrap.bind('ctrl+command+g', function () {
     Session.toggle('hasPageBorder');
   });
   Mousetrap.bind('ctrl+command+p', function () {
@@ -57,9 +52,11 @@ Meteor.startup(function () {
   Mousetrap.bind('ctrl+command+o', function () {
     Session.toggle('pageBackgroundIsWhite');
   });
+  Mousetrap.bind('ctrl+command+b', function () {
+    Session.toggle('formBuilderPanelVisible');
+  });
 
-
-  Mousetrap.bind('ctrl+command+g', function () {
+  Mousetrap.bind('ctrl+command+f', function () {
     Session.toggle('navIsFullscreen');
   });
   Mousetrap.bind('ctrl+command+h', function () {
@@ -68,23 +65,4 @@ Meteor.startup(function () {
   Mousetrap.bind('ctrl+command+j', function () {
     Session.toggle('pageIsWide');
   });
-});
-
-
-Template.keybindingsModal.events({
-  "click #modalOkButton": function (event, template) {
-    Session.set('show_keybindings', false);
-    Session.set('show_reactive_overlay', false);
-  }
-});
-
-
-Template.keybindingsModal.helpers({
-  getVisibility: function () {
-    if (Session.get('show_keybindings')) {
-      return "visible";
-    } else {
-      return "fade";
-    }
-  }
 });
