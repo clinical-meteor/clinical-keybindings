@@ -2,7 +2,7 @@
 Template.keybindingsModal.events({
   "click #modalOkButton": function (event, template) {
     Session.set('show_keybindings', false);
-    Session.set('show_reactive_overlay', false);
+    Session.set('showReactiveOverlay', false);
   }
 });
 

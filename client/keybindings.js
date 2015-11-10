@@ -8,7 +8,7 @@ Meteor.startup(function () {
 
   Mousetrap.bind('ctrl+command+k', function () {
     Session.toggle('show_keybindings');
-    Session.toggle('show_reactive_overlay');
+    Session.toggle('showReactiveOverlay');
   });
   Mousetrap.bind('ctrl+command+l', function () {
     Session.toggle('showInboxCard');
