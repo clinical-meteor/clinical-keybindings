@@ -1,10 +1,14 @@
 Meteor.startup(function () {
+  console.log('Configuring keybindings...');
+
   Session.setDefault('show_keybindings', false);
   Session.setDefault('mainPanelIsCard', true);
 
   Session.setDefault('showSearchbar', false);
   Session.setDefault('showNavbars', true);
   Session.setDefault('showSidebar', false);
+
+  Session.setDefault('useHierarchicalLayout', false);
 
   Mousetrap.bind('ctrl+command+k', function () {
     Session.toggle('show_keybindings');
@@ -31,6 +35,10 @@ Meteor.startup(function () {
   });
   Mousetrap.bind('ctrl+command+s', function () {
     Session.toggle('showSearchbar');
+  });
+  Mousetrap.bind('ctrl+command+a', function () {
+    console.log('ctrl+command+d');
+    Session.toggle('useHierarchicalLayout');
   });
   Mousetrap.bind('ctrl+command+c', function () {
     Session.toggle('mainPanelIsCard');
