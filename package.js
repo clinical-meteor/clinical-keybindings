@@ -1,6 +1,6 @@
 Package.describe({
   name: 'clinical:keybindings',
-  version: '1.2.0',
+  version: '1.2.1',
   summary: 'Keybindings modal for  ClinicalFramework apps.',
   git: 'https://github.com/clinical-meteor/clinical-keybindings',
   documentation: 'README.md'
