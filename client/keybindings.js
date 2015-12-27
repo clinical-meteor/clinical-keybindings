@@ -8,6 +8,9 @@ Meteor.startup(function () {
   Session.setDefault('showNavbars', true);
   Session.setDefault('showSidebar', false);
 
+  Session.setDefault('showAccountCard', false);
+  Session.setDefault('showRightCard', false);
+
   Session.setDefault('useHierarchicalLayout', false);
 
   Mousetrap.bind('ctrl+command+k', function () {
@@ -24,8 +27,7 @@ Meteor.startup(function () {
   });
   Mousetrap.bind('ctrl+command+r', function () {
     Session.toggle('showAccountCard');
-    Session.toggle('showThemeCard');
-    Session.toggle('showProfileCard');
+    Session.toggle('showRightCard');
   });
   Mousetrap.bind('ctrl+command+n', function () {
     Session.toggle('showNavbars');
