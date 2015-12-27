@@ -64,7 +64,7 @@ Meteor.startup(function () {
     Session.toggle('formBuilderPanelVisible');
   });
 
-  Mousetrap.bind('ctrl+command+f', function () {
+  Mousetrap.bind('ctrl+command+q', function () {
     Session.toggle('navIsFullscreen');
   });
   Mousetrap.bind('ctrl+command+h', function () {
@@ -72,5 +72,8 @@ Meteor.startup(function () {
   });
   Mousetrap.bind('ctrl+command+j', function () {
     Session.toggle('pageIsWide');
+  });
+  Mousetrap.bind('ctrl+command+e', function () {
+    Session.toggle('useCardLayout');
   });
 });
