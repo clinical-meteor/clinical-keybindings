@@ -1,5 +1,5 @@
 Meteor.startup(function () {
-  console.log('Configuring keybindings...');
+  //console.log('Configuring keybindings...');
 
   Session.setDefault('show_keybindings', false);
   Session.setDefault('mainPanelIsCard', true);
@@ -12,6 +12,8 @@ Meteor.startup(function () {
   Session.setDefault('showRightCard', false);
 
   Session.setDefault('useHierarchicalLayout', false);
+
+  Session.setDefault('hasPageVerticalPadding', true);
 
   Mousetrap.bind('ctrl+command+k', function () {
     Session.toggle('show_keybindings');
@@ -59,23 +61,34 @@ Meteor.startup(function () {
   Mousetrap.bind('ctrl+command+p', function () {
     Session.toggle('hasPagePadding');
   });
-  Mousetrap.bind('ctrl+command+o', function () {
-    Session.toggle('pageBackgroundIsWhite');
-  });
-  Mousetrap.bind('ctrl+command+b', function () {
-    Session.toggle('formBuilderPanelVisible');
-  });
+
 
   Mousetrap.bind('ctrl+command+q', function () {
     Session.toggle('navIsFullscreen');
   });
-  Mousetrap.bind('ctrl+command+h', function () {
-    Session.toggle('pageLeftToWestRule');
-  });
+  // Mousetrap.bind('ctrl+command+h', function () {
+  //   Session.toggle('pageLeftToWestRule');
+  // });
   Mousetrap.bind('ctrl+command+j', function () {
     Session.toggle('pageIsWide');
   });
-  Mousetrap.bind('ctrl+command+e', function () {
+  Mousetrap.bind('ctrl+command+r', function () {
     Session.toggle('useCardLayout');
+  });
+  Mousetrap.bind('ctrl+command+m', function () {
+    Session.toggle('hasPageVerticalPadding');
+  });
+  Mousetrap.bind('ctrl+command+v', function () {
+    Session.toggle('useVerticalFences');
+  });
+  Mousetrap.bind('ctrl+command+h', function () {
+    Session.toggle('useHorizontalFences');
+  });
+
+  Mousetrap.bind('ctrl+command+b', function () {
+    Session.toggle('appSurfaceOffset');
+  });
+  Mousetrap.bind('ctrl+command+e', function () {
+    Session.toggle('useEastFence');
   });
 });

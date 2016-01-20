@@ -1,6 +1,6 @@
 Package.describe({
   name: 'clinical:keybindings',
-  version: '1.2.3',
+  version: '1.2.4',
   summary: 'Keybindings modal for  ClinicalFramework apps.',
   git: 'https://github.com/clinical-meteor/clinical-keybindings',
   documentation: 'README.md'
@@ -20,7 +20,6 @@ Package.onUse(function (api) {
   api.addFiles('client/components/keybindingsModal/keybindingsModal.less', 'client');
 
   api.addFiles('client/keybindings.js', 'client');
-  api.addFiles('client/methods.js', 'client');
 
   api.export('keybindingsModal');
 });
