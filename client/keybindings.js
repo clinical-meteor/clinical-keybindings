@@ -34,9 +34,9 @@ Meteor.startup(function () {
   Mousetrap.bind('ctrl+command+n', function () {
     Session.toggle('showNavbars');
   });
-  Mousetrap.bind('ctrl+command+m', function () {
-    Session.toggle('showSidebar');
-  });
+  // Mousetrap.bind('ctrl+command+m', function () {
+  //   Session.toggle('showSidebar');
+  // });
   Mousetrap.bind('ctrl+command+s', function () {
     Session.toggle('showSearchbar');
   });
