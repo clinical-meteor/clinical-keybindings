@@ -14,6 +14,8 @@ Meteor.startup(function () {
   Session.setDefault('useHierarchicalLayout', false);
 
   Session.setDefault('hasPageVerticalPadding', true);
+  Session.setDefault("hasFooterPadding", false);
+  Session.setDefault("wideSecondPanel", false);
 
   Mousetrap.bind('ctrl+command+k', function () {
     Session.toggle('show_keybindings');
@@ -90,5 +92,12 @@ Meteor.startup(function () {
   });
   Mousetrap.bind('ctrl+command+e', function () {
     Session.toggle('useEastFence');
+  });
+
+  Mousetrap.bind('ctrl+command+z', function () {
+    Session.toggle('hasFooterPadding');
+  });
+  Mousetrap.bind('ctrl+command+x', function () {
+    Session.toggle('wideSecondPanel');
   });
 });
