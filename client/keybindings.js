@@ -17,6 +17,8 @@ Meteor.startup(function () {
   Session.setDefault("hasFooterPadding", false);
   Session.setDefault("wideSecondPanel", false);
 
+  Session.setDefault('zoom', 100);
+
   Mousetrap.bind('ctrl+command+k', function () {
     Session.toggle('show_keybindings');
     Session.toggle('showReactiveOverlay');
@@ -99,5 +101,14 @@ Meteor.startup(function () {
   });
   Mousetrap.bind('ctrl+command+x', function () {
     Session.toggle('wideSecondPanel');
+  });
+
+  Mousetrap.bind('ctrl+command+=', function () {
+    Session.set('zoom', Session.get('zoom') + 10);
+    console.log('zoom', Session.get('zoom') + "%");
+  });
+  Mousetrap.bind('ctrl+command+-', function () {
+    Session.set('zoom', Session.get('zoom') - 10);
+    console.log('zoom', Session.get('zoom') + "%");
   });
 });
