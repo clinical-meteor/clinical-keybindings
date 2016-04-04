@@ -1,18 +1,18 @@
 Package.describe({
   name: 'clinical:keybindings',
-  version: '1.3.0',
+  version: '1.3.1',
   summary: 'Keybindings modal for  ClinicalFramework apps.',
-  git: 'https://github.com/clinical-meteor/clinical-keybindings',
+  git: 'https://github.com/clinical-meteor/keybindings',
   documentation: 'README.md'
 });
 
 Package.onUse(function (api) {
-  api.versionsFrom('1.1.0.2');
+  api.versionsFrom('1.1.0.3');
 
   api.use('meteor-platform');
   api.use('grove:less@0.1.1');
-  api.use('awatson1978:fonts-helveticas@1.0.4');
   api.use('clinical:modals@1.0.5');
+  api.use('clinical:fonts@1.1.0');
   api.use('mousetrap:mousetrap@1.4.6');
 
   api.addFiles('client/components/keybindingsModal/keybindingsModal.html', 'client');
@@ -27,5 +27,4 @@ Package.onUse(function (api) {
 Package.onTest(function (api) {
   api.use('tinytest');
   api.use('clinical:keybindings');
-  api.addFiles('tests/keybindings.js');
 });
