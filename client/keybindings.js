@@ -19,6 +19,9 @@ Meteor.startup(function () {
 
   Session.setDefault('zoom', 100);
 
+  Mousetrap.bind('ctrl+command+t', function () {
+    Session.toggle('showThemingControls');
+  });
   Mousetrap.bind('ctrl+command+k', function () {
     Session.toggle('show_keybindings');
     Session.toggle('showReactiveOverlay');
