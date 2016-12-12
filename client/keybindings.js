@@ -80,7 +80,8 @@ Meteor.startup(function() {
     Session.toggle('pageIsWide');
   });
   Mousetrap.bind('ctrl+command+r', function() {
-    Session.toggle('useCardLayout');
+    Session.toggle('sidebarPinned');  // this is the sidebar on the right
+    //Session.toggle('useCardLayout');
   });
   Mousetrap.bind('ctrl+command+m', function() {
     Session.toggle('hasPageVerticalPadding');
