@@ -17,7 +17,13 @@ Meteor.startup(function() {
   Session.setDefault("hasFooterPadding", false);
   Session.setDefault("wideSecondPanel", false);
 
+  Session.setDefault("secondPanelVisible", false);
+
   Session.setDefault('zoom', 100);
+
+  Mousetrap.bind('ctrl+command+2', function() {
+    Session.toggle('secondPanelVisible');
+  });
 
   Mousetrap.bind('ctrl+command+t', function() {
     Session.toggle('showThemingControls');
