@@ -11,6 +11,8 @@ Meteor.startup(function() {
   Session.setDefault('showAccountCard', false);
   Session.setDefault('showRightCard', false);
 
+  Session.setDefault('showAlert', false);
+
   Session.setDefault('useHierarchicalLayout', false);
 
   Session.setDefault('hasPageVerticalPadding', true);
@@ -54,8 +56,8 @@ Meteor.startup(function() {
     Session.toggle('showSearchbar');
   });
   Mousetrap.bind('ctrl+command+a', function() {
-    console.log('ctrl+command+d');
-    Session.toggle('useHierarchicalLayout');
+    Session.toggle('showAlert');
+    // Session.toggle('useHierarchicalLayout');
   });
   Mousetrap.bind('ctrl+command+c', function() {
     Session.toggle('mainPanelIsCard');
@@ -75,13 +77,10 @@ Meteor.startup(function() {
     Session.toggle('hasPagePadding');
   });
 
-
   Mousetrap.bind('ctrl+command+q', function() {
     Session.toggle('navIsFullscreen');
   });
-  // Mousetrap.bind('ctrl+command+h', function () {
-  //   Session.toggle('pageLeftToWestRule');
-  // });
+
   Mousetrap.bind('ctrl+command+j', function() {
     Session.toggle('pageIsWide');
   });
