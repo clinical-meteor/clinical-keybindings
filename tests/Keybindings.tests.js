@@ -11,10 +11,12 @@ describe('clinical:keybindings', function () {
   afterEach(function () {
     //console.log('afterEach');
   });
-  it('Searchbars show/hide keybing', function () {
-    expect(Session.get('showSearchbar')).to.exist;
-  });
-  it('Navbar show/hide keybing', function () {
-    expect(Session.get('showNavbars')).to.exist;
-  });
+  if (Meteor.isClient) {
+    it('Searchbars show/hide keybing', function () {
+      expect(Session.get('showSearchbar')).to.exist;
+    });
+    it('Navbar show/hide keybing', function () {
+      expect(Session.get('showNavbars')).to.exist;      
+    });
+  }
 });
