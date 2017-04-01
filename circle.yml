@@ -41,7 +41,7 @@ dependencies:
     - cd helloworld && meteor npm install
     - cd helloworld && npm i --save-dev selenium-webdriver@3.0.0-beta-2 chromedriver
     - cd helloworld && meteor add dispatch:mocha practicalmeteor:chai
-    - cd helloworld && meteor add clinical:keybinding
+    - cd helloworld && meteor add clinical:keybindings
     - cd helloworld && mkdir imports 
     - cd helloworld && cp ../tests/Keybindings.tests.js imports/
     
