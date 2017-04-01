@@ -1,3 +1,8 @@
+import { Meteor } from 'meteor/meteor';
+import { Session } from 'meteor/session';
+import { assert } from 'meteor/practicalmeteor:chai';
+import { chai } from 'meteor/practicalmeteor:chai';
+import { expect } from 'meteor/practicalmeteor:chai';
 
 describe('clinical:keybindings', function () {
   beforeEach(function () {
