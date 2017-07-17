@@ -19,12 +19,20 @@ Meteor.startup(function() {
   Session.setDefault("hasFooterPadding", false);
   Session.setDefault("wideSecondPanel", false);
 
-  Session.setDefault("secondPanelVisible", false);
+  Session.setDefault('searchPanelVisible', false);
+  Session.setDefault('secondPanelVisible', false);
+  Session.setDefault('thirdPanelVisible', false);
 
   Session.setDefault('zoom', 100);
 
+  Mousetrap.bind('ctrl+command+3', function() {
+    Session.toggle('thirdPanelVisible');
+  });
   Mousetrap.bind('ctrl+command+2', function() {
     Session.toggle('secondPanelVisible');
+  });
+  Mousetrap.bind('ctrl+command+1', function() {
+    Session.toggle('searchPanelVisible');
   });
 
   Mousetrap.bind('ctrl+command+t', function() {
@@ -75,6 +83,9 @@ Meteor.startup(function() {
   });
   Mousetrap.bind('ctrl+command+p', function() {
     Session.toggle('hasPagePadding');
+  });
+  Mousetrap.bind('ctrl+command+o', function() {
+    Session.toggle('isWideHorizontally');
   });
 
   Mousetrap.bind('ctrl+command+q', function() {
