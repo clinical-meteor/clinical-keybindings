@@ -22,6 +22,8 @@ Meteor.startup(function() {
   Session.setDefault('searchPanelVisible', false);
   Session.setDefault('secondPanelVisible', false);
   Session.setDefault('thirdPanelVisible', false);
+  Session.setDefault("showOrbital", false);
+
 
   Session.setDefault('zoom', 100);
 
@@ -134,4 +136,10 @@ Meteor.startup(function() {
     Session.set('zoom', Session.get('zoom') - 10);
     console.log('zoom', Session.get('zoom') + "%");
   });
+
+
+  Mousetrap.bind('ctrl+shift+o', function() {
+    Session.toggle('showOrbital');
+  });  
 });
+
